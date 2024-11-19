@@ -1,17 +1,11 @@
 import { useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import {RouterProvider} from "react-router-dom";
+import router from "./routes";
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div>
-      <Header />
-      <main className="min-h-screen"></main>
-      <Footer />
-    </div>
+    <RouterProvider router={router} />
   );
-}
-
-export default App;
+};
