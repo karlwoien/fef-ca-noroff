@@ -1,16 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function Nav () {
     return (
         <nav>
-            <ul className="flex items-center space-x-4">
-                <li>
-                    <a href="/" className="text-white hover:text-megablue transition-colors">
-                        Home
-                    </a>
+            <ul className="flex items-center space-x-4 text-white">
+                <li className="hover:text-megablue transition-colors">
+                    <Link to="/">Home</Link>
                 </li>
-                <li>
-                    <a href="/contact" className="text-white hover:text-megablue transition-colors">
-                        Contact
-                    </a>
+                <li className="hover:text-megablue transition-colors">
+                    <Link to="/contact">Contact</Link>
                 </li>
             </ul>
         </nav>
