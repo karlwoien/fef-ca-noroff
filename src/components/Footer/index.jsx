@@ -1,4 +1,5 @@
 import { FaArrowUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export default function Footer () {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,7 @@ export default function Footer () {
     <footer className="flex items-center justify-between px-6 py-4 shadow-md pb-8">
       {/* Logo */}
       <div className="text-xl text-megablue">
-        <a href="/">MegaBuy</a>
+        <Link to="/">MegaBuy</Link>
       </div>
 
       {/* Copyright */}
