@@ -1,5 +1,6 @@
 import SearchBar from "./SearchBar";
 import Nav from "./Nav";
+import CartIcon from "../CartIcon";
 import { Link } from "react-router-dom";
 
 export default function Header () {
@@ -18,9 +19,7 @@ export default function Header () {
             {/* Nav + Cart icon */}
             <div className="flex items-center space-x-6 flex-shrink-0">
                 <Nav />
-                <button className="p-2 rounded-full text-white" aria-label="Cart">
-                    Cart
-                </button>
+                <CartIcon />
             </div>
         </header>
     );
