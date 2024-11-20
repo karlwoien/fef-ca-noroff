@@ -1,19 +1,13 @@
-import SearchBar from "./SearchBar";
 import Nav from "./Nav";
 import CartIcon from "../CartIcon";
 import { Link } from "react-router-dom";
 
 export default function Header () {
     return (
-        <header className="flex items-center justify-between px-6 py-4 bg-megadark shadow-md">
+        <header className="flex items-center justify-between px-6 py-6 bg-megadark">
             {/* Logo */}
-            <div className="text-xl text-megablue" aria-label="Logo">
+            <div className="text-3xl text-megablue font-semibold" aria-label="Logo">
                 <Link to="/">MegaBuy</Link>
-            </div>
-
-            {/* Search bar */}
-            <div className="flex-grow mx-6">
-                <SearchBar />
             </div>
 
             {/* Nav + Cart icon */}
