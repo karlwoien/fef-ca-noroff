@@ -20,10 +20,8 @@ export default function Home() {
             </section>
 
             {/*SearchBar*/}
-            <section className="pt-8">
-                <div className="max-w-6xl mx-auto">
-                    <SearchBar />
-                </div>
+            <section className="pt-8 px-4 max-w-6xl mx-auto">
+                {!loading && <SearchBar products={products} />}
             </section>
 
             {/*Product section*/}
