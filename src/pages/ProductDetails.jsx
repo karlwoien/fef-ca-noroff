@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductByID } from '../api/fetch';
+import { useCartStore } from '../components/Store';
 
 export default function ProductDetails() {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
+    const addToCart = useCartStore((state) => state.addItem);
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -68,7 +70,7 @@ export default function ProductDetails() {
 
                     {/* Legg til i handlekurv */}
                     <button
-                        onClick={() => alert("Add to Cart clicked!")}
+                        onClick={() => addToCart(product)}
                         className="mt-6 bg-megablue text-white py-2 px-4 rounded hover:bg-megablue-dark transition"
                     >
                         Add to Cart
