@@ -1,5 +1,6 @@
 import { useCartStore } from '../components/Store';
 import { Link } from 'react-router-dom';
+import { MdOutlineRemoveShoppingCart } from 'react-icons/md';
 
 export default function Checkout() {
     const items = useCartStore((state) => state.items);
@@ -14,8 +15,12 @@ export default function Checkout() {
 
     if (items.length === 0) {
         return (
-            <div className="text-center mt-8">
-                <p>Your cart is empty.</p>
+            <div className="flex flex-col items-center justify-center text-center mt-8">
+                <MdOutlineRemoveShoppingCart className="text-8xl mb-4"/>
+                <h3 className='text-3xl font-bold pb-4'>Your cart is empty</h3>
+                <p>
+                    Looks like you haven't added anything to your cart yet.
+                </p>
                 <Link
                     to="/"
                     className="text-megablue hover:underline mt-4 inline-block"
