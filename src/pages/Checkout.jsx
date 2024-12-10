@@ -97,7 +97,7 @@ export default function Checkout() {
                     <LinkButton 
                         to="/checkout-success"
                         label="Checkout"
-                        className="inline-block w-full m-0"
+                        className="inline-block w-full mx-0"
                     />
                 </div>
             </div>
