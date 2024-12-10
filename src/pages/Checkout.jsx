@@ -1,6 +1,7 @@
 import { useCartStore } from '../components/Store';
 import { Link } from 'react-router-dom';
 import { MdOutlineRemoveShoppingCart } from 'react-icons/md';
+import LinkButton from '../components/LinkButton';
 
 export default function Checkout() {
     const items = useCartStore((state) => state.items);
@@ -21,12 +22,10 @@ export default function Checkout() {
                 <p>
                     Looks like you haven't added anything to your cart yet.
                 </p>
-                <Link
-                    to="/"
-                    className="text-megablue hover:underline mt-4 inline-block"
-                >
-                    Go back to shopping
-                </Link>
+                <LinkButton 
+                    to= {"/"}
+                    label="Go Shopping"
+                />
             </div>
         );
     }
@@ -95,12 +94,11 @@ export default function Checkout() {
                     <h2 className="text-xl font-bold">Checkout Summary</h2>
                     <p className="text-lg">Total: NOK {total.toFixed(2)}</p>
                     <p className="text-lg">Shipping: Free</p>
-                    <Link
+                    <LinkButton 
                         to="/checkout-success"
-                        className="inline-block bg-megablue text-white py-2 px-4 rounded hover:bg-megablue-dark transition w-full text-center"
-                    >
-                        Checkout
-                    </Link>
+                        label="Checkout"
+                        className="inline-block w-full m-0"
+                    />
                 </div>
             </div>
         </div>

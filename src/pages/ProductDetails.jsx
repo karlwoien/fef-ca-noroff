@@ -71,7 +71,7 @@ export default function ProductDetails() {
                     {/* Legg til i handlekurv */}
                     <button
                         onClick={() => addToCart(product)}
-                        className="mt-6 bg-megablue text-white py-2 px-4 rounded hover:bg-megablue-dark transition"
+                        className="mt-6 bg-megablue text-white text-center py-3 px-4 rounded hover:bg-white hover:text-megablue  border border-megablue transition duration-300"
                     >
                         Add to Cart
                     </button>

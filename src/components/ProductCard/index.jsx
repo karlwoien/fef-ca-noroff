@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LinkButton from "../LinkButton";
 
 export default function ProductCard({ product }) {
     return (
@@ -19,12 +20,10 @@ export default function ProductCard({ product }) {
             </div>
 
             {/* Link */}
-            <Link
+            <LinkButton 
                 to={`/product/${product.id}`}
-                className="btn m-4 bg-megablue text-white text-center py-3 rounded hover:bg-white hover:text-megablue border border-megablue transition duration-300"
-            >
-                View product
-            </Link>
+                label="View Product"
+            />
         </div>
     );
 };

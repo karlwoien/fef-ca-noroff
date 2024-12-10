@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useCartStore } from '../components/Store';
 import { Link } from 'react-router-dom';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
+import LinkButton from '../components/LinkButton';
 
 export default function CheckoutSuccess() {
     const clearCart = useCartStore((state) => state.clearCart);
@@ -17,7 +18,7 @@ export default function CheckoutSuccess() {
 
             {/* Success Message */}
             <h1 className="text-5xl font-bold mb-4 ">Checkout Successful</h1>
-            <p className="text-lg text-center mb-8">
+            <p className="text-lg text-center mb-4">
                 
                 We hope you'll be happy with your purchase. <br />
                 Please don't hesitate to{' '}
@@ -28,12 +29,10 @@ export default function CheckoutSuccess() {
             </p>
 
             {/* Shop More Button */}
-            <Link
+            <LinkButton 
                 to="/"
-                className="bg-megablue text-white py-3 px-6 rounded hover:bg-megablue-dark transition"
-            >
-                Shop More!
-            </Link>
+                label="Shop More!"
+            />
         </div>
     );
 }
