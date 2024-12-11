@@ -51,42 +51,74 @@ export default function ProductDetails() {
 
                 {/* Produktdetaljer */}
                 <div>
-                    <h1 className="text-3xl font-bold">{product.title}</h1>
+                    <h1 className="text-3xl font-bold text-megablue">{product.title}</h1>
                     <p className="mt-4">{product.description}</p>
+                    <p className='mt-2'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nobis vero ducimus quia eveniet distinctio dolores ullam culpa iusto ipsum necessitatibus libero molestias doloremque temporibus assumenda ut, dolorem corrupti soluta.</p>
+
+                     {/* Reviews lenke */}
+                    <div className='mt-4 text-sm'>
+                        <button
+                            onClick={() => {
+                                const reviewsSection = document.getElementById('review-section');
+                                reviewsSection?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className=" hover:underline"
+                        >
+                            Reviews ({product.reviews?.length || 0})
+                        </button>
+                    </div>
 
                     {/* Pris og rabatt */}
-                    <div className="mt-6">
+                    <div className="mt-4 flex items-center">
                         <p className="text-xl font-semibold">
                             NOK {product.discountedPrice.toFixed(2)}
                         </p>
                         {hasDiscount && (
-                            <p className="text-sm text-green-600 mt-1">
+                            <p className="text-sm text-green-600 pl-4">
                                 Save {discount}% (Original price: NOK {product.price.toFixed(2)})
                             </p>
                         )}
                     </div>
-
+                    
                     {/* Legg til i handlekurv */}
                     <button
                         onClick={() => addToCart(product)}
-                        className="mt-6 bg-megablue text-white text-center py-3 px-4 rounded hover:bg-white hover:text-megablue  border border-megablue transition duration-300"
+                        className="mt-4 bg-megablue text-white text-center py-3 px-4 rounded hover:bg-white hover:text-megablue  border border-megablue transition duration-300"
                     >
                         Add to Cart
                     </button>
+
+                    {/* Tags */}
+                    <div className='mt-4 text-sm'>
+                        <p>Tags:</p>
+                        {product.tags && product.tags.length > 0 && (
+                            <div className="mt-2 flex flex-wrap gap-2">
+                                {product.tags.map((tag, index) => (
+                                    <span
+                                        key={index}
+                                        className="border px-3 py-1 rounded"
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
 
             {/* Anmeldelser */}
-            <div className="mt-12">
+            <div id='review-section' className="mt-12">
                 <h2 className="text-2xl font-semibold">Reviews</h2>
                 {product.reviews && product.reviews.length > 0 ? (
                     <ul className="mt-4 space-y-4">
                         {product.reviews.map((review) => (
                             <li key={review.id} className="p-4 border rounded-lg shadow-sm">
-                                <p>{review.description}</p>
-                                <p className="text-sm text-gray-500 mt-2">
-                                    - {review.username || 'Anonymous'}
-                                </p>
+                                <div className="flex items-center space-x-2">
+                                    <p className="font-semibold">{review.username || 'Anonymous'}</p>
+                                    <p className="text-megablue">Rating: {review.rating}/5</p>
+                                </div>
+                                <p className="mt-2">"{review.description}"</p>
                             </li>
                         ))}
                     </ul>
