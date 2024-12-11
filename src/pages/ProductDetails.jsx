@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductByID } from '../api/fetch';
 import { useCartStore } from '../components/Store';
+import { calculateDiscount } from '../utils/discount';
 
 export default function ProductDetails() {
     const { id } = useParams();
@@ -32,11 +33,8 @@ export default function ProductDetails() {
             return <p>Product not found..</p>;
         }
 
-        // Kalkuler rabatt hvis det er en
-        const hasDiscount = product.price > product.discountedPrice;
-        const discount = hasDiscount
-            ? Math.round(((product.price - product.discountedPrice) / product.price) * 100)
-            : null;
+        const discount = calculateDiscount(product.price, product.discountedPrice);
+        const hasDiscount = discount !== null;
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-8">
