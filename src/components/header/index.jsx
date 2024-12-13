@@ -32,7 +32,7 @@ export default function Header () {
 
             {/* Hamburger Icon for Mobile */}
             <div className="flex items-center space-x-6 md:hidden">
-                <CartIcon />
+                <CartIcon closeMenu={closeMenu} />
                 <button
                     onClick={toggleMenu}
                     aria-label="Toggle navigation menu"
