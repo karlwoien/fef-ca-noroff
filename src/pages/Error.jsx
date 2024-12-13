@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { FiAlertCircle } from "react-icons/fi";
 import LinkButton from "../components/LinkButton";
+import { useTitle } from "../Hooks/UseTitle";
 
 export default function Error () {
+    useTitle("Page Not Found");
+    
     return (
         <div className="py-10 flex flex-col items-center justify-center px-4">
             <FiAlertCircle size={100} className="text-red-500 mb-6" />

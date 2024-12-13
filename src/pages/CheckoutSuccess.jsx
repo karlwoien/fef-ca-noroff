@@ -3,8 +3,11 @@ import { useCartStore } from '../components/Store';
 import { Link } from 'react-router-dom';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
 import LinkButton from '../components/LinkButton';
+import { useTitle } from '../Hooks/UseTitle';
 
 export default function CheckoutSuccess() {
+    useTitle("Checkout-success");
+
     const clearCart = useCartStore((state) => state.clearCart);
 
     useEffect(() => {

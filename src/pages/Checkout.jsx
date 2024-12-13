@@ -2,8 +2,11 @@ import { useCartStore } from '../components/Store';
 import { Link } from 'react-router-dom';
 import { MdOutlineRemoveShoppingCart } from 'react-icons/md';
 import LinkButton from '../components/LinkButton';
+import { useTitle } from '../Hooks/UseTitle';
 
 export default function Checkout() {
+    useTitle("Checkout");
+    
     const items = useCartStore((state) => state.items);
     const removeItem = useCartStore((state) => state.removeItem);
     const increaseQuantity = useCartStore((state) => state.increaseQuantity);

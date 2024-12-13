@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTitle } from '../Hooks/UseTitle';
 
 export default function Contact() {
+    useTitle("Contact");
+
     const [formData, setFormData] = useState({
         fullName: '',
         subject: '',

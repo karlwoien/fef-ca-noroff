@@ -1,8 +1,10 @@
 import { useProducts } from "../Hooks/UseProducts";
 import SearchBar from "../components/SearchBar";
 import ProductCard from "../components/ProductCard";
+import { useTitle } from "../Hooks/UseTitle";
 
 export default function Home() {
+    useTitle("Home")
     const {products, loading} = useProducts();
 
     return (
