@@ -6,7 +6,7 @@ import { useTitle } from '../Hooks/UseTitle';
 
 export default function Checkout() {
     useTitle("Checkout");
-    
+
     const items = useCartStore((state) => state.items);
     const removeItem = useCartStore((state) => state.removeItem);
     const increaseQuantity = useCartStore((state) => state.increaseQuantity);
@@ -45,7 +45,7 @@ export default function Checkout() {
                         {items.map((item) => (
                             <li
                                 key={item.id}
-                                className="flex justify-between items-center border p-4 rounded-lg"
+                                className="flex flex-col sm:flex-row justify-between items-center border p-4 rounded-lg gap-y-4"
                             >
                                 {/* Thumbnail og Produktdetaljer */}
                                 <div className="flex items-center space-x-4">
