@@ -5,6 +5,7 @@ import { useCartStore } from '../components/Store';
 import { calculateDiscount } from '../utils/discount';
 import { useTitle } from '../Hooks/UseTitle';
 import Loader from '../components/Loader';
+import LinkButton from '../components/LinkButton';
 
 export default function ProductDetails() {
     const { id } = useParams();
@@ -34,7 +35,18 @@ export default function ProductDetails() {
         }
 
         if (!product) {
-            return <p>Product not found..</p>;
+            return (
+                <div className="flex flex-col items-center justify-center text-center px-4 py-10">
+                    <h1 className="text-3xl font-bold text-megablue mb-4">Product Not Found</h1>
+                    <p className="text-lg mb-6">
+                        We are sorry, but the product you are looking for does not seem to exist or is unavailable.
+                    </p>
+                    <LinkButton 
+                        to="/"
+                        label="Continue Shopping"
+                    />
+                </div>
+            );
         }
 
         const discount = calculateDiscount(product.price, product.discountedPrice);
