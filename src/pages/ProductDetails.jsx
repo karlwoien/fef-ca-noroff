@@ -4,6 +4,7 @@ import { getProductByID } from '../api/fetch';
 import { useCartStore } from '../components/Store';
 import { calculateDiscount } from '../utils/discount';
 import { useTitle } from '../Hooks/UseTitle';
+import Loader from '../components/Loader';
 
 export default function ProductDetails() {
     const { id } = useParams();
@@ -29,7 +30,7 @@ export default function ProductDetails() {
         useTitle(product ? product.title : "Loading...");
 
         if (loading) {
-            return <p>Loading product details...</p>;
+            return <Loader />
         }
 
         if (!product) {
