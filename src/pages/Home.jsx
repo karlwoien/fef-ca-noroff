@@ -1,8 +1,11 @@
 import { useProducts } from "../Hooks/UseProducts";
 import SearchBar from "../components/SearchBar";
 import ProductCard from "../components/ProductCard";
+import { useTitle } from "../Hooks/UseTitle";
+import Loader from "../components/Loader";
 
 export default function Home() {
+    useTitle("Home")
     const {products, loading} = useProducts();
 
     return (
@@ -27,9 +30,7 @@ export default function Home() {
             {/*Product section*/}
             <section className="py-8 max-w-6xl mx-auto">
                 <div className="px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 auto-rows-fr">
-                    {loading ? (
-                        <p>Loading products...</p>
-                    ) : (
+                    {loading ? <Loader /> : (
                         products.map((product) => (
                             <ProductCard key={product.id} product={product} />
                         ))

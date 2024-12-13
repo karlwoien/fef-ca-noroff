@@ -9,3 +9,13 @@ body {
     font-family: "Inter", sans-serif;
     color: white;
 }
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
