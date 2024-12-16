@@ -5,4 +5,4 @@ export function useTitle(title) {
     useEffect(() => {
         updatePageTitle(title);
     }, [title]);
-}
+};

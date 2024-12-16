@@ -19,7 +19,6 @@ export default function Footer () {
                     </p>
                     <p className="text-sm mt-2">© {currentYear} MegaBuy</p>
                 </div>
-              
                 {/* Navigasjonslenker */}
                 <div className="self-start">
                     <h3 className="text-lg">Quick Links</h3>
@@ -36,7 +35,6 @@ export default function Footer () {
                         </li>
                     </ul>
                 </div>
-
                 {/* Sosiale Medier */}
                 <div className='self-start'>
                     <h3 className="text-lg">Follow Us</h3>
@@ -62,7 +60,6 @@ export default function Footer () {
                       <FaArrowUp size={16} className="text-white" />
                     </button>
                 </div>
-                
             </div>
         </footer>
   );

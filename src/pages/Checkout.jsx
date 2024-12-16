@@ -1,8 +1,7 @@
 import { useCartStore } from '../components/Store';
-import { Link } from 'react-router-dom';
 import { MdOutlineRemoveShoppingCart } from 'react-icons/md';
 import LinkButton from '../components/LinkButton';
-import { useTitle } from '../Hooks/UseTitle';
+import { useTitle } from '../hooks/UseTitle';
 
 export default function Checkout() {
     useTitle("Checkout");
@@ -91,7 +90,6 @@ export default function Checkout() {
                         ))}
                     </ul>
                 </div>
-
                 {/* Checkout Summary Section */}
                 <div className="border p-4 rounded-lg space-y-4">
                     <h2 className="text-xl font-bold">Checkout Summary</h2>
@@ -106,4 +104,4 @@ export default function Checkout() {
             </div>
         </div>
     );
-}
+};

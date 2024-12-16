@@ -13,4 +13,4 @@ export default function useScreenSize(breakpoint = 768) {
     }, [breakpoint]);
 
     return isSmallScreen;
-}
+};

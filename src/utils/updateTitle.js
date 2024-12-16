@@ -5,4 +5,4 @@
 export function updatePageTitle(title) {
     const baseTitle = "MegaBuy"; // Base title for the website
     document.title = title ? `${title} | ${baseTitle}` : baseTitle;
-}
+};

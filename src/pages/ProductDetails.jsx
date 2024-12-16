@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getProductByID } from '../api/fetch';
 import { useCartStore } from '../components/Store';
 import { calculateDiscount } from '../utils/discount';
-import { useTitle } from '../Hooks/UseTitle';
+import { useTitle } from '../hooks/UseTitle';
 import Loader from '../components/Loader';
 import LinkButton from '../components/LinkButton';
 
@@ -64,14 +64,12 @@ export default function ProductDetails() {
                         className="w-full h-auto object-cover rounded-lg"
                     />
                 </div>
-
                 {/* Produktdetaljer */}
                 <div>
                     <h1 className="text-3xl font-bold text-megablue">{product.title}</h1>
                     <p className="mt-4">{product.description}</p>
                     <p className='mt-2'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nobis vero ducimus quia eveniet distinctio dolores ullam culpa iusto ipsum necessitatibus libero molestias doloremque temporibus assumenda ut, dolorem corrupti soluta.</p>
-
-                     {/* Reviews lenke */}
+                    {/* Reviews lenke */}
                     <div className='mt-4 text-sm'>
                         <button
                             onClick={() => {
@@ -83,7 +81,6 @@ export default function ProductDetails() {
                             Reviews ({product.reviews?.length || 0})
                         </button>
                     </div>
-
                     {/* Pris og rabatt */}
                     <div className="mt-4 flex items-center">
                         <p className="text-xl font-semibold">
@@ -95,7 +92,6 @@ export default function ProductDetails() {
                             </p>
                         )}
                     </div>
-                    
                     {/* Legg til i handlekurv */}
                     <button
                         onClick={() => addToCart(product)}
@@ -103,7 +99,6 @@ export default function ProductDetails() {
                     >
                         Add to Cart
                     </button>
-
                     {/* Tags */}
                     <div className='mt-4 text-sm'>
                         <p>Tags:</p>
@@ -122,7 +117,6 @@ export default function ProductDetails() {
                     </div>
                 </div>
             </div>
-
             {/* Anmeldelser */}
             <div id='review-section' className="mt-12">
                 <h2 className="text-2xl font-semibold">Reviews</h2>
