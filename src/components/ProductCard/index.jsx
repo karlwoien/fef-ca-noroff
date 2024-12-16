@@ -15,7 +15,6 @@ export default function ProductCard({ product }) {
                     className="h-full w-full object-cover rounded-t-lg"
                 />
             </div>
-
             {/* Content */}
             <div className="m-4 flex-grow flex flex-col">
                 <h3 className="mt-2 text-lg font-semibold">{product.title}</h3>
@@ -28,7 +27,6 @@ export default function ProductCard({ product }) {
                     )}
                 </div>
             </div>
-
             {/* Link */}
             <LinkButton 
                 to={`/product/${product.id}`}

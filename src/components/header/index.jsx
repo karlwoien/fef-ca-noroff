@@ -23,13 +23,11 @@ export default function Header () {
             <div className="text-3xl text-megablue font-semibold" aria-label="Logo">
                 <Link to="/">MegaBuy</Link>
             </div>
-
             {/* Desktop Nav + Cart icon */}
             <div className="hidden md:flex items-center space-x-6 flex-shrink-0">
                 <Nav />
                 <CartIcon />
             </div>
-
             {/* Hamburger Icon for Mobile */}
             <div className="flex items-center space-x-6 md:hidden">
                 <CartIcon closeMenu={closeMenu} />
@@ -41,7 +39,6 @@ export default function Header () {
                     {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
                 </button>
             </div>
-
             {/* Mobile Menu */}
             {menuOpen && (
                 <div

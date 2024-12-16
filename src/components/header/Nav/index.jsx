@@ -23,4 +23,4 @@ export default function Nav({ isMobile = false, closeMenu = () => {} }) {
             </ul>
         </nav>
     );
-}
+};

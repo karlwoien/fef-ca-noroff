@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useTitle } from '../Hooks/UseTitle';
+import { useTitle } from '../hooks/UseTitle';
+import LinkButton from '../components/LinkButton';
 
 export default function Contact() {
     useTitle("Contact");
@@ -80,12 +80,10 @@ export default function Contact() {
                         Your message has been sent successfully. <br />
                         We'll get back to you as soon as possible.
                     </p>
-                    <Link
+                    <LinkButton 
                         to="/"
-                        className=" bg-megablue text-white py-2 px-4 rounded"
-                    >
-                        Continue Shopping
-                    </Link>
+                        label="Continue Shopping"
+                    />
                 </div>
             ) : (
                 <>
@@ -121,7 +119,6 @@ export default function Contact() {
                                 <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>
                             )}
                         </div>
-
                         {/* Subject */}
                         <div>
                             <label htmlFor="subject" className="block text-sm font-medium">
@@ -140,7 +137,6 @@ export default function Contact() {
                                 <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
                             )}
                         </div>
-
                         {/* Email */}
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium">
@@ -159,7 +155,6 @@ export default function Contact() {
                                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>
                             )}
                         </div>
-
                         {/* Body */}
                         <div>
                             <label htmlFor="body" className="block text-sm font-medium">
@@ -178,7 +173,6 @@ export default function Contact() {
                                 <p className="text-red-500 text-sm mt-1">{errors.body}</p>
                             )}
                         </div>
-
                         {/* Submit Button */}
                         <button
                             type="submit"

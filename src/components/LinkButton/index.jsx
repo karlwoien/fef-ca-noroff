@@ -10,4 +10,4 @@ export default function LinkButton({ to, label, className, icon: Icon, ...props 
             {label}
         </Link>
     );
-}
+};

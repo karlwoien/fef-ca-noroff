@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import { FiAlertCircle } from "react-icons/fi";
 import LinkButton from "../components/LinkButton";
-import { useTitle } from "../Hooks/UseTitle";
+import { useTitle } from "../hooks/UseTitle";
 
 export default function Error () {
     useTitle("Page Not Found");
