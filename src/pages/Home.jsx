@@ -1,7 +1,7 @@
 import { useProducts } from "../hooks/UseProducts";
 import SearchBar from "../components/SearchBar";
 import ProductCard from "../components/ProductCard";
-import { useTitle } from "../hooks/UseTitle";
+import { useTitle } from "../Hooks/UseTitle";
 import Loader from "../components/Loader";
 
 export default function Home() {

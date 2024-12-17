@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getProductByID } from '../api/fetch';
 import { useCartStore } from '../components/Store';
 import { calculateDiscount } from '../utils/discount';
-import { useTitle } from '../hooks/UseTitle';
+import { useTitle } from '../Hooks/UseTitle';
 import Loader from '../components/Loader';
 import LinkButton from '../components/LinkButton';
 

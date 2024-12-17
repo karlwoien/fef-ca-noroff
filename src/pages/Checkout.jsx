@@ -1,6 +1,6 @@
 import { useCartStore } from "../components/Store";
 import LinkButton from "../components/LinkButton";
-import { useTitle } from "../hooks/UseTitle";
+import { useTitle } from "../Hooks/UseTitle";
 import EmptyCart from "../components/EmptyCart";
 import CartItem from "../components/CartItem";
 

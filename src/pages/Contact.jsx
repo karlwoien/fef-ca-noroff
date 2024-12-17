@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTitle } from '../hooks/UseTitle';
+import { useTitle } from '../Hooks/UseTitle';
 import LinkButton from '../components/LinkButton';
 
 export default function Contact() {
