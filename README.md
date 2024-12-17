@@ -4,7 +4,7 @@ This project is part of a Noroff school assignment with the goal of applying Rea
 
 ## 🚀 Live demo
 
-Check out the live site here: [MegaBuy](www.megabuy.netlify.app)
+Check out the live site here: [MegaBuy](https://megabuy.netlify.app)
 
 ## 📖 Description
 MegaBuy is a fully functional eCommerce store that allows users to browse products, view individual product details, manage their cart, and complete purchases. The site is designed to be responsive and provides a smooth user experience across all devices.
