@@ -38,6 +38,7 @@ MegaBuy is a fully functional eCommerce store that allows users to browse produc
 - **React**
 - **React Router**
 - **React Icons**
+- **React-hook-form**
 - **Tailwind CSS**
 - **Zustand**
 - **Vite**
