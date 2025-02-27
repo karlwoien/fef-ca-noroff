@@ -21,8 +21,8 @@ export default function CheckoutSuccess() {
       {/* Success Message */}
       <h1 className="mb-4 text-5xl font-bold">Checkout Successful</h1>
       <p className="mb-4 text-center text-lg">
-        We hope you'll be happy with your purchase. <br />
-        Please don't hesitate to{" "}
+        We hope you&apos;ll be happy with your purchase. <br />
+        Please don&apos;t hesitate to{" "}
         <Link to="/contact" className="text-megablue underline">
           contact
         </Link>{" "}

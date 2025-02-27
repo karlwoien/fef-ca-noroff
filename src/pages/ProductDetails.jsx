@@ -135,7 +135,7 @@ export default function ProductDetails() {
                   </p>
                   <p className="text-megablue">Rating: {review.rating}/5</p>
                 </div>
-                <p className="mt-2">"{review.description}"</p>
+                <p className="mt-2">{review.description}</p>
               </li>
             ))}
           </ul>

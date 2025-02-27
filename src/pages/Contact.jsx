@@ -24,7 +24,7 @@ export default function Contact() {
           <h1 className="text-5xl font-bold text-megablue">Thank You!</h1>
           <p className="my-4 text-lg">
             Your message has been sent successfully. <br />
-            We'll get back to you as soon as possible.
+            We&apos;ll get back to you as soon as possible.
           </p>
           <LinkButton to="/" label="Continue Shopping" />
         </div>
@@ -34,7 +34,7 @@ export default function Contact() {
             <h1 className="text-5xl font-bold text-megablue">Contact us</h1>
             <p className="mt-4 text-lg">
               Have questions about our products or your purchase? <br />
-              Reach out to us using the form below. We're here to help!
+              Reach out to us using the form below. We&apos;re here to help!
             </p>
           </div>
 

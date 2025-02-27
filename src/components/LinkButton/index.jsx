@@ -4,7 +4,6 @@ export default function LinkButton({
   to,
   label,
   className,
-  icon: Icon,
   ...props
 }) {
   return (
