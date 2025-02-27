@@ -1,4 +1,5 @@
 # Course assignement - Front-end Frameworks
+![megabuy netlify app](https://github.com/user-attachments/assets/97a55c10-b46f-4728-bffa-56fc63903f8c)
 
 This project is part of a Noroff school assignment with the goal of applying React knowledge to build an eCommerce store.
 
