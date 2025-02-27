@@ -2,7 +2,7 @@ import Nav from "./Nav";
 import CartIcon from "../CartIcon";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import React, { useState } from "react";
+import { useState } from "react";
 import useScreenSize from "../../Hooks/UseScreenSize";
 
 export default function Header () {
