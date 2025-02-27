@@ -5,8 +5,8 @@
  * @returns {number | null} - The discount percentage, or null if no discount.
  */
 export function calculateDiscount(price, discountedPrice) {
-    if (price > discountedPrice) {
-        return Math.round(((price - discountedPrice) / price) * 100);
-    }
-    return null;
-};
+  if (price > discountedPrice) {
+    return Math.round(((price - discountedPrice) / price) * 100);
+  }
+  return null;
+}
