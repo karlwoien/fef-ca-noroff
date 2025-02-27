@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function LinkButton({
-  to,
-  label,
-  className,
-  ...props
-}) {
+export default function LinkButton({ to, label, className, ...props }) {
   return (
     <Link
       to={to}
